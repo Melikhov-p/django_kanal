@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MAIN</title>
+</head>
+<body>
+   <table>
+	<tbody>
+		<tr>
+			<td>Заказ</td>
+			<td>Стоимость $</td>
+			<td>Стоимость ₽</td>
+			<td>Дата доставки</td>
+		</tr>
+    <tr>
+        {% for order in orders %}
+			<td>{{ order.order }}</td>
+			<td>{{ order.cost_usd }}</td>
+			<td>{{ order.cost_rub }}</td>
+			<td>{{ order.delivery_date }}</td>
+		</tr>
+    {% endfor %}
+	</tbody>
+</table>
+</body>
+<style>
+    html {
+        display: flex;
+        justify-content: center;
+    }
+    td {
+        border: 1px solid;
+    }
+</style>
+</html>
